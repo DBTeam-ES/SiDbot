@@ -1,8 +1,8 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-	/calc <expression>
-	This command solves math expressions and does conversion between common units. See mathjs.org/docs/expressions/syntax for a list of accepted syntax.
+	🔨 /calc [expression]
+	Calculadora.
 ]]
 
 PLUGIN.triggers = {

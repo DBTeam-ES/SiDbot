@@ -9,7 +9,8 @@ PLUGIN.triggers = {
 	'^/help',
 	'^/h$',
 	'^/start$',
-  '^/ajuda$'
+	'^/ajuda$',
+	'^/ajuda@SiDBot$'
 }
 
 function PLUGIN.action(msg)

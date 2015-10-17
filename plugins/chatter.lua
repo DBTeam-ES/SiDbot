@@ -13,18 +13,18 @@ function PLUGIN.action(msg)
 
 	local input = get_input(msg.text)
 
-	local url = 'http://www.simsimi.com/requestChat?lc=en&ft=1.0&req=' .. URL.escape(input)
+	local url = 'http://www.simsimi.com/requestChat?lc=pt&ft=1.0&req' .. URL.escape(input)
 
 	local jstr, res = HTTP.request(url)
 
 	if res ~= 200 then
-		return send_message(msg.chat.id, "I don't feel like talking right now.")
+		return send_message(msg.chat.id, "'-'")
 	end
 
 	local jdat = JSON.decode(jstr)
 
 	if string.match(jdat.res, '^I HAVE NO RESPONSE.') or not jdat then
-		jdat.res = "I don't know what to say to that."
+		jdat.res = "Hi, Vamos fala sobre vc?"
 	end
 
 	local message = jdat.res
