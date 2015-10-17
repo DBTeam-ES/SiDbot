@@ -3,7 +3,7 @@ HTTPS= require('ssl.https')
 URL  = require('socket.url')
 JSON = require('dkjson')
 
-VERSION = '2.11'
+VERSION = '2.0'..'Buil.2'
 
 function on_msg_receive(msg)
 
@@ -14,7 +14,7 @@ function on_msg_receive(msg)
 	end
 
 	if msg.new_chat_participant and msg.new_chat_participant.id == bot.id then
-		msg.text = '/about'
+		msg.text = 'Olá, Eu me chamou SiD, estou aqui para ajuda.'
 	end -- If bot is added to a group, send the about message.
 
 	if msg.date < os.time() - 10 then return end -- don't react to old messages
@@ -41,7 +41,7 @@ function on_msg_receive(msg)
 end
 
 function bot_init()
-
+  print('SiD Bot - Welcome')
 	print('Loading configuration...')
 
 	config = dofile('config.lua')
