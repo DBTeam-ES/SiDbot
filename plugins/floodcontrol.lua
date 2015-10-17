@@ -23,7 +23,7 @@ local action = function(msg)
 
 	floodcontrol[input.groupid] = os.time() + input.duration
 
-	local s = input.groupid .. ' silenced for ' .. input.duration .. ' seconds.'
+	local s = input.groupid .. ' Não vou fala com voçê por ' .. input.duration .. 's'
 
 	send_message(-34496439, s) -- Set this to whatever, or comment it out. I use it to send this data to my private bot group.
 

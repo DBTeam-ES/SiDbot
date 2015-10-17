@@ -13,7 +13,7 @@ function PLUGIN.action(msg)
 	local message = config.locale.errors.argument
 
 	if not config.admins[msg.from.id] then
-		return send_msg(msg, 'Permission denied.')
+		return send_msg(msg, 'Não quero.')
 	end
 
 	if string.lower(first_word(input)) == 'run' then
@@ -29,12 +29,12 @@ function PLUGIN.action(msg)
 	elseif string.lower(first_word(input)) == 'reload' then
 
 		bot_init()
-		message = 'Bot reloaded!'
+		message = 'Hi! Estou de volta.'
 
 	elseif string.lower(first_word(input)) == 'halt' then
 
 		is_started = false
-		message = 'Shutting down...'
+		message = 'Fui...'
 
 	end
 

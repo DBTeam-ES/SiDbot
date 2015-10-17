@@ -1,7 +1,6 @@
 local doc = [[
-	/nick <nickname>
-	Set your nickname for the bot to call you.
-	Use -- to clear your nickname.
+	🔨 /nick [nick]
+	Troca o nick (Apelido).
 ]]
 
 local triggers = {
@@ -16,7 +15,7 @@ local action = function(msg)
 	if not input then
 		local message = ''
 		if data[id] then
-			message = '\nYour nickname is currently ' .. data[id] .. '.'
+			message = '\nSeu apelido é atualmente' .. data[id] .. '.'
 		end
 		return send_msg(msg, doc..message)
 	end
@@ -24,14 +23,14 @@ local action = function(msg)
 	if input == '--' then
 		data[id] = nil
 		save_data('nicknames.json', data)
-		send_msg(msg, 'Your nickname has been deleted.')
+		send_msg(msg, 'Seu apelido fui deletado.')
 		return
 	end
 
 	input = input:sub(1,64):gsub('\n',' ')
 	data[id] = input
 	save_data('nicknames.json', data)
-	send_msg(msg, 'Your nickname has been set to ' .. input .. '.')
+	send_msg(msg, 'Seu novo apelido: ' .. input .. '.')
 
 end
 

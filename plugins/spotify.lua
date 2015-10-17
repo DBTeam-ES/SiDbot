@@ -3,8 +3,8 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-  /spotify <music>
-  Track Spotify music.
+  🔨 /spotify [Nome da musica]
+  Pesquisar de musica no spotify.
 ]]
 
 PLUGIN.triggers = {
@@ -42,7 +42,7 @@ function PLUGIN.action(msg)
   -- ERRO 404
   local text_end = gets -- Text END
   if gets == "" then
-    text_end = "Not found music"
+    text_end = "Música não encontrado"
   end
   -- Send MSG
   send_msg(msg, text_end)

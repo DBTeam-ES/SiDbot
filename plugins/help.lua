@@ -1,14 +1,15 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-	/help [command]
-	Get list of basic information for all commands, or more detailed documentation on a specified command.
+	🔨 /ajuda [plugin]
+	Obter ajuda de diversos plugins.
 ]]
 
 PLUGIN.triggers = {
 	'^/help',
 	'^/h$',
-	'^/start$'
+	'^/start$',
+  '^/ajuda$'
 }
 
 function PLUGIN.action(msg)
@@ -27,15 +28,14 @@ function PLUGIN.action(msg)
 		end
 	end
 
-	local message = 'Available commands:\n' .. help_message .. [[
-		*Arguments: <required> [optional]
+	local message = '💼 Plugins lista: \n \n' .. help_message .. [[
 	]]
 
 	if msg.from.id ~= msg.chat.id then
 		if not send_message(msg.from.id, message, true, msg.message_id) then
 			return send_msg(msg, message) -- Unable to PM user who hasn't PM'd first.
 		end
-		return send_msg(msg, 'I have sent you the requested information in a private message.')
+		return send_msg(msg, 'Eu enviei-lhe as informações solicitadas em uma mensagem privada.')
 	else
 		return send_msg(msg, message)
 	end
