@@ -1,8 +1,8 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-	/echo <text>
-	Repeat a string.
+	🔨 /echo <text>
+	Echo.
 ]]
 
 PLUGIN.triggers = {

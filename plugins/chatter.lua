@@ -5,20 +5,20 @@ local PLUGIN = {}
 PLUGIN.typing = true
 
 PLUGIN.triggers = {
-	'^@' .. bot.username .. ', ',
-	'^' .. bot.first_name .. ', '
+	'^@sidbot, ',
+	'^[Ss][Ii][Dd]'
 }
 
 function PLUGIN.action(msg)
 
 	local input = get_input(msg.text)
 
-	local url = 'http://www.simsimi.com/requestChat?lc=pt&ft=1.0&req' .. URL.escape(input)
+	local url = 'http://www.simsimi.com/requestChat?lc=pt&ft=1.0&req=' .. URL.escape(input)
 
 	local jstr, res = HTTP.request(url)
 
 	if res ~= 200 then
-		return send_message(msg.chat.id, "'-'")
+		return send_message(msg.chat.id, "I don't feel like talking right now.")
 	end
 
 	local jdat = JSON.decode(jstr)

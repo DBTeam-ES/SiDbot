@@ -3,7 +3,7 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-	/qr <text>
+	🔨 /qr <text>
 	QR Code Gerador.
 ]]
 
@@ -17,9 +17,9 @@ function PLUGIN.action(msg)
 	if not input then
 		return send_msg(msg, PLUGIN.doc)
 	end
-  -- API
-  local url = 'http://api.qrserver.com/v1/create-qr-code/?size=500x500&data=' .. (URL.escape(input) or '')
-	send_message(msg.chat.id, latcyr(url))
+    -- API
+    local url = 'http://api.qrserver.com/v1/create-qr-code/?size=500x500&data=' .. (URL.escape(input) or '')
+	send_message(msg.chat.id, url)
 
 end
 

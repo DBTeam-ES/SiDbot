@@ -1,3 +1,4 @@
 config.lua
 loc/weeb.lua
 *.json
+plugins/beta.lua
