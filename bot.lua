@@ -3,7 +3,7 @@ HTTPS= require('ssl.https')
 URL  = require('socket.url')
 JSON = require('dkjson')
 
-VERSION = '2.0'..'Buil.3'
+VERSION = '2.0'..'Buil.4'
 
 function on_msg_receive(msg)
 
@@ -90,7 +90,7 @@ while is_started do
 
 	local res = get_updates(last_update+1)
 	if not res then
-		print('Error getting updates.')
+		print('>>>ERROR getting updates.')
 	else
 		for i,v in ipairs(res.result) do
 			if v.update_id > last_update then
