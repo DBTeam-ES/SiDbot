@@ -1,7 +1,7 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-	/lastfm [username]
+	🔨 /lastfm [username]
 	Get current- or last-played track data from last.fm. If a username is specified, it will return info for that username rather than your own.
 	"/fmset username" will configure your last.fm username.
 ]]

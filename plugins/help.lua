@@ -10,6 +10,7 @@ PLUGIN.triggers = {
 	'^/h$',
 	'^/start$',
 	'^/ajuda$',
+	'^/Ajuda@SiDBot$',
 	'^/ajuda@SiDBot$'
 }
 

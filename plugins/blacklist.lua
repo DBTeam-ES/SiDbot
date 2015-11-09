@@ -2,13 +2,13 @@
 
 local triggers = {
 	'^/blacklist',
-	'^/listofcolor'
+	'^/offuser'
 }
 
 local action = function(msg)
 
-	if not config.admins[msg.from.id] then
-		return send_msg(msg, 'Permission denied.')
+	if not config.moderation.admins[tostring(msg.from.id)] then
+		return send_msg(msg, 'Não quero...')
 	end
 
 	local name
@@ -18,7 +18,7 @@ local action = function(msg)
 			input = msg.reply_to_message.from.id
 			name = msg.reply_to_message.from.first_name
 		else
-			return send_msg(msg, 'Must be used via reply or by specifying a user\'s ID.')
+			return send_msg(msg, 'Amigo, Coloca o ID.')
 		end
 	end
 
@@ -27,10 +27,10 @@ local action = function(msg)
 
 	if blacklist[id] then
 		blacklist[id] = nil
-		send_message(msg.chat.id, name .. ' has been removed from the blacklist.')
+		send_message(msg.chat.id, name .. ' Saiu - blacklist.')
 	else
 		blacklist[id] = true
-		send_message(msg.chat.id, name .. ' has been blacklisted.')
+		send_message(msg.chat.id, name .. ' ADD - blacklisted.')
 	end
 
 	save_data('blacklist.json', blacklist)

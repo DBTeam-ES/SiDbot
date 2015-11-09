@@ -118,3 +118,12 @@ function save_data(filename, data)
 	f:close()
 
 end
+
+function save_add(filename, data)
+
+	local s = JSON.encode(data)
+	local f = io.open(filename, 'a')
+	f:write(s)
+	f:close()
+
+end

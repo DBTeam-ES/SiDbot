@@ -1,7 +1,7 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-	/reddit [r/subreddit | query]
+	🔨 /reddit [r/subreddit | Pesquisar]
 	This command returns top results for a given query or subreddit. NSFW posts are marked as such.
 ]]
 
@@ -72,8 +72,8 @@ function PLUGIN.action(msg)
 			url = '\n' .. jdat.data.children[i].data.url .. '\n'
 		end
 
-		local short_url = '[redd.it/' .. jdat.data.children[i].data.id .. '] '
-		message = message .. short_url .. jdat.data.children[i].data.title .. url
+		local short_url = '📝 [redd.it/' .. jdat.data.children[i].data.id .. '] '
+		message = message .. short_url .. jdat.data.children[i].data.title .. url .. '\n'
 
 	end
 
