@@ -15,8 +15,9 @@ function PLUGIN.action(msg)
 
   local message = [[
   S̲̅ɪ̲̅D̲̅
-    Meu nome é ]] .. bot.first_name .. [[ 
-    💼/Ajuda  💿 SOON IA SiD  🔨SiDv]] .. VERSION .. [[.
+    Meu nome é SiD 
+    💼/Ajuda  💿 IA (BySimSimi)  
+    --🔨SiDv]] .. VERSION .. [[.
     
     DEV:@TiagoDanin
     Chanel:Telegram.me/BotSid
