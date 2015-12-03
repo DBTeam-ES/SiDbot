@@ -8,8 +8,8 @@ PLUGIN.doc = [[
 ]]
 
 PLUGIN.triggers = {
-  '^/suporte',
-  '^/sos'
+  '^/[Ss]uporte',
+  '^/[Ss]os'
 }
 
 function PLUGIN.action(msg)
@@ -19,11 +19,16 @@ function PLUGIN.action(msg)
     send_msg(msg, PLUGIN.doc)
     return nil
   end
+  
+  if not msg.from.username then
+    msg.from.username = "nil"
+  end
+  
   local id = '-36333593'
-  local user = msg.from.id
+  local user = msg.from.id .. ' -:- @' .. msg.from.username
   local text = user .. '::> \n' .. input
   send_message(id, text)
-  send_msg(msg, "Enviando - Send")
+  send_msg(msg, "📩 Enviando - Send")
 
 end
 

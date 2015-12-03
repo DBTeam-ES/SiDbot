@@ -21,6 +21,7 @@ function PLUGIN.action(msg)
     
     DEV:@TiagoDanin
     Chanel:Telegram.me/BotSid
+    Sugestão e Suporte:/Sos [MSG]
 
   Based on otouto v2.11 by @topkecleon.
   licensed GPLv2.

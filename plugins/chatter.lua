@@ -12,7 +12,7 @@ PLUGIN.triggers = {
 }
 
 function PLUGIN.action(msg)
-
+	
 	local input = get_input(msg.text)
 
 	local url = 'http://www.simsimi.com/requestChat?lc=pt&ft=1.0&req=' .. URL.escape(input)
@@ -47,7 +47,7 @@ function PLUGIN.action(msg)
 		message = message .. '.'
 	end
 
-	send_message(msg.chat.id, message)
+	send_msg(msg, message)
 
 end
 

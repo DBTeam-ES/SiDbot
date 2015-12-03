@@ -1,5 +1,6 @@
 -- Spotify Plugin for bot based on otouto
--- ByTiagoDanin - Telegram.me/tiagodanin
+-- ByTiagoDanin
+-- Telegram:@TiagoDanin -:- Twitter:@_TiagoEDGE
 local PLUGIN = {}
 
 PLUGIN.doc = [[

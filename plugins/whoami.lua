@@ -1,13 +1,12 @@
 local PLUGIN = {}
 
 PLUGIN.doc = [[
-	/whoami
-	Get the user ID for yourself and the group. Use it in a reply to get info for the sender of the original message.
+	🔨 /who
+	Obter os ids
 ]]
 
 PLUGIN.triggers = {
-	'^/whoami',
-	'^/ping',
+	'^/whos$',
 	'^/who$'
 }
 
@@ -34,11 +33,11 @@ function PLUGIN.action(msg)
 		from_name = from_name .. ' ' .. msg.from.last_name
 	end
 	if msg.from.username then
-		from_name = '@' .. msg.from.username .. ', AKA ' .. from_name
+		from_name = '@' .. msg.from.username .. ' : ' .. from_name
 	end
 	from_name = from_name .. ' (' .. msg.from.id .. ')'
 
-	local message = message .. 'You are ' .. from_name .. ' and you are messaging ' .. to_name .. '.'
+	local message = message .. "Seu username: " .. from_name .. ' >> ' .. to_name .. '.'
 
 	send_msg(msg, message)
 

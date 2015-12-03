@@ -3,7 +3,8 @@ HTTPS= require('ssl.https')
 URL  = require('socket.url')
 JSON = require('dkjson')
 
-VERSION = '2.0'..'Buil.25'
+VERSION = '2.1 - End version 2' -- ..'Buil.00'
+DEV = '@TiagoDanin'
 
 function on_msg_receive(msg)
 
@@ -14,7 +15,7 @@ function on_msg_receive(msg)
 	end
 
 	if msg.new_chat_participant and msg.new_chat_participant.id == bot.id then
-		msg.text = 'Olá, Eu me chamou SiD, estou aqui para ajuda.'
+		msg.text = '/sobre'
 	end -- If bot is added to a group, send the about message.
 
 	if msg.date < os.time() - 10 then return end -- don't react to old messages
@@ -22,6 +23,7 @@ function on_msg_receive(msg)
 	if msg.forward_from then return end -- don't react to forwarded messages
 
 	local lower = string.lower(msg.text)
+
 	for i,v in pairs(plugins) do
 		for j,w in pairs(v.triggers) do
 			if string.match(lower, w) then
@@ -58,14 +60,15 @@ function bot_init()
 	end
 	bot = bot.result
 
-	print('Loading plugins...')
+	print('...Loading plugins...')
 
 	plugins = {}
 	for i,v in ipairs(config.plugins) do
 		local p = dofile('plugins/'..v)
 		table.insert(plugins, p)
+		print('Plugin: ', v)
 	end
-
+	
 	print('Plugins loaded: ' .. #plugins .. '. Generating help message...')
 
 	help_message = ''
@@ -76,7 +79,7 @@ function bot_init()
 		end
 	end
 
-	print('@'.. bot.username ..', AKA '.. bot.first_name ..' ('.. bot.id ..')')
+	print('@'.. bot.username ..', >>AKA>> '.. bot.first_name ..' ('.. bot.id ..')')
 
 	is_started = true
 
