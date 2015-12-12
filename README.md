@@ -1,4 +1,4 @@
-# SiD
+# SiDV2 (Beta)
 Repo SiDBot. Bot in Portugues.
 Public bot run [@SiDBot](http://telegram.me/SiDBot)
 
@@ -11,5 +11,5 @@ Written for Lua 5.2 but will probably run on 5.3.
 [@tiagodanin](http://telegram.me/tiagodanin)
 
 ###LICENSE
-Fork [Otouto](https://github.com/topkecleon/otouto)
+Fork [Otouto](https://github.com/topkecleon/otouto) V2
 GNU GENERAL PUBLIC LICENSE ByTokecleon
