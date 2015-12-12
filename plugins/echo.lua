@@ -1,6 +1,6 @@
 local doc = [[
-	/echo <text>
-	Repeat a string of text!
+	🔨 /echo [text]
+	ECHO, ECHO!
 ]]
 
 local triggers = {

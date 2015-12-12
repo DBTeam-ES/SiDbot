@@ -5,7 +5,7 @@ local triggers = {
 }
 
 local action = function(msg)
-	sendMessage(msg.chat.id, 'Pong!')
+	sendMessage(msg.chat.id, '🎾Pong!')
 end
 
 return {

@@ -7,94 +7,59 @@ return {
 	biblia_api_key = '',
 	thecatapi_key = '',
 	time_offset = 0,
-	lang = 'en',
-	admin = 00000000,
-	about_text = [[
-I am otouto, the plugin-wielding, multi-purpose Telegram bot written by topkecleon.
-
-Send /help to get started.
-
-Join my channel for news about updates!
-telegram.me/otouto
-]]	,
+	lang = 'pt-br',
+	admin = 89198119,
+	about_text = [[ ^.^ ]]	,
 	errors = {
-		connection = 'Connection error.',
-		results = 'No results found.',
+		connection = 'Ops. Não conseguir abrir',
+		results = 'Não achei :',
 		argument = 'Invalid argument.',
 		syntax = 'Invalid syntax.',
-		antisquig = 'This group is English only.',
-		moderation = 'I do not moderate this group.',
-		not_mod = 'This command must be run by a moderator.',
-		not_admin = 'This command must be run by an administrator.',
-		chatter_connection = 'I don\'t feel like talking right now.',
-		chatter_response = 'I don\'t know what to say to that.'
+		antisquig = 'PT',
+		moderation = '😒 Não quero....',
+		not_mod = '😒 Não quero ....',
+		not_admin = '😒 Não quero ...',
+		chatter_connection = 'ERRO ',
+		chatter_response = 'Vamos fala da nova TecPix?'
 	},
 	greetings = {
 		['Hello, #NAME.'] = {
 			'hello',
-			'hey',
-			'sup',
-			'hi',
-			'good morning',
-			'good day',
-			'good afternoon',
-			'good evening'
+			'Ola!',
+      'oi'
 		},
 		['Goodbye, #NAME.'] = {
 			'bye',
-			'later',
-			'see ya',
-			'good night'
+      'Até mais',
+      'Adeus 0/'
 		},
 		['Welcome back, #NAME.'] = {
-			'i\'m home',
-			'i\'m back'
+			'Bem-Vindo'
 		},
 		['You\'re welcome, #NAME.'] = {
-			'thanks',
-			'thank you'
+			'Obrigador'
 		}
 	},
-	moderation = {
-		admins = {
-			['00000000'] = 'You'
-		},
-		admin_group = -00000000,
-		realm_name = 'My Realm'
-	},
+  moderation = {
+    admins = {
+      ['89198119'] = 'TiagoEDGE'
+    },
+    admin_group = -36333593,
+    realm_name = 'TiagoEDGE'
+  },
 	plugins = {
+    -- Base Plugin
 		'blacklist.lua',
 		'floodcontrol.lua',
-		'admin.lua',
-		'about.lua',
-		'ping.lua',
-		'whoami.lua',
-		'nick.lua',
-		'echo.lua',
-		'gSearch.lua',
-		'gImages.lua',
-		'gMaps.lua',
-		'youtube.lua',
-		'wikipedia.lua',
-		'hackernews.lua',
-		'imdb.lua',
-		'calc.lua',
-		'urbandictionary.lua',
-		'time.lua',
-		'eightball.lua',
-		'reactions.lua',
-		'dice.lua',
-		'reddit.lua',
-		'xkcd.lua',
-		'slap.lua',
-		'commit.lua',
-		'pun.lua',
-		'pokedex.lua',
-		'bandersnatch.lua',
-		'currency.lua',
-		'cats.lua',
-		-- Put new plugins here.
-		'help.lua',
-		'greetings.lua'
+		'admin.lua', 
+		'about.lua', 
+		'ping.lua', 
+		'whoami.lua', 
+		'nick.lua', 
+		'echo.lua', 
+		'help.lua'
+    -- Beta plugins
+    -- New Plugin
+    -- DB
 	}
 }

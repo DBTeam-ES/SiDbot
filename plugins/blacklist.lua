@@ -18,6 +18,7 @@ local triggers = {
 	end
 
 	if msg.from.id ~= config.admin then
+    sendReply(msg, 'Não quero...')
 		return -- End if the user isn't admin.
 	end
 
@@ -26,17 +27,17 @@ local triggers = {
 		if msg.reply_to_message then
 			input = tostring(msg.reply_to_message.from.id)
 		else
-			sendReply(msg, 'You must use this command via reply or by specifying a user\'s ID.')
+			sendReply(msg, 'Amigo, Coloca o ID.')
 			return
 		end
 	end
 
 	if blacklist[input] then
 		blacklist[input] = nil
-		sendReply(msg, input .. ' has been removed from the blacklist.')
+		sendReply(msg, input .. ' Saiu - blacklist.')
 	else
 		blacklist[input] = true
-		sendReply(msg, input .. ' has been added to the blacklist.')
+		sendReply(msg, input .. ' Entrou - blacklist.')
 	end
 
 	save_data('blacklist.json', blacklist)

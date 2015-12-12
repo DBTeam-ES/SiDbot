@@ -1,7 +1,7 @@
  -- This plugin should go at the end of your plugin list in
  -- config.lua, but not after greetings.lua.
 
-local help_text = 'Available commands:\n'
+local help_text = '💼  Lista:\n'
 
 for i,v in ipairs(plugins) do
 	if v.doc then
@@ -10,18 +10,19 @@ for i,v in ipairs(plugins) do
 	end
 end
 
-local help_text = help_text .. 'Arguments: <required> [optional]'
+-- local help_text = help_text .. 'Arguments: <required> [optional]'
 
 local triggers = {
 	'^/h[elp]*[@'..bot.username..']*$',
-	'^/start[@'..bot.username..']*'
+	'^/start[@'..bot.username..']*',
+  '^/ajuda*[@'..bot.username..']*$'
 }
 
 local action = function(msg)
 
 	if msg.from.id ~= msg.chat.id then
 		if sendMessage(msg.from.id, help_text) then
-			sendReply(msg, 'I have sent you the requested information in a private message.')
+			sendReply(msg, 'Eu enviei-lhe as informações solicitadas em uma mensagem privada. ;)')
 		else
 			sendReply(msg, help_text)
 		end

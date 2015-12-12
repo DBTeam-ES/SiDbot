@@ -65,7 +65,7 @@ local action = function(msg)
 		end
 	end
 
-	sendReply(msg, 'Specify a command: run, reload, halt.')
+	sendReply(msg, 'Specify a command: run, reload, halt. ⚡️SUPER ADMIN: @TiagoDanin')
 
 end
 

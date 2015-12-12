@@ -31,7 +31,7 @@ local action = function(msg)
 
 	floodcontrol[input.groupid] = os.time() + input.duration
 
-	print(input.groupid .. ' silenced for ' .. input.duration .. ' seconds.')
+	print(input.groupid .. ' Não vou fala com voçê por ' .. input.duration .. ' s.')
 
 end
 

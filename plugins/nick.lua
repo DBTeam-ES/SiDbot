@@ -1,6 +1,6 @@
 local doc = [[
-	/nick <nickname>
-	Set your nickname. Use "/whoami" to check your nickname and "/nick -" to delete it.
+	🔨 /nick [nick]
+  Troca o nick (Apelido).
 ]]
 
 local triggers = {
@@ -15,8 +15,8 @@ local action = function(msg)
 		return true
 	end
 
-	if string.len(input) > 32 then
-		sendReply(msg, 'The character limit for nicknames is 32.')
+	if string.len(input) > 25 then
+		sendReply(msg, 'Max 25.')
 		return true
 	end
 
@@ -24,10 +24,10 @@ local action = function(msg)
 
 	if input == '-' then
 		nicks[msg.from.id_str] = nil
-		sendReply(msg, 'Your nickname has been deleted.')
+		sendReply(msg, 'Ok, Não falou mais esse nome.')
 	else
 		nicks[msg.from.id_str] = input
-		sendReply(msg, 'Your nickname has been set to "' .. input .. '".')
+		sendReply(msg, 'Ok, Agora vou chamar de "' .. input .. '".')
 	end
 
 	save_data('nicknames.json', nicks)
