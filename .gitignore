@@ -1,0 +1,7 @@
+config.lua
+loc/weeb.lua
+*.json
+plugins/beta.lua
+plugins/dbsid.lua
+plugins/sid.lua
+*.html

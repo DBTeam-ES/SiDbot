@@ -1,5 +1,5 @@
 return {
-	bot_api_key = '107890456:AAGyqOZmLBoN7tHpePo5EHSL0jAmT-oKbn4',
+	bot_api_key = '107890456:AAGj1OILK_w7gv0rRI26YFgLwazBrbHtRuQ',
 	google_api_key = '',
 	google_cse_key = '',
 	lastfm_api_key = '60ae7e5412fedef8c1c00dd8c745fd28',
@@ -55,10 +55,14 @@ return {
 		'ping.lua', 
 		'whoami.lua', 
 		'nick.lua', 
-	    'echo.lua', 
-	    'help.lua'
+	  'echo.lua', 
+	  'help.lua',
     -- Beta plugins
     -- New Plugin
+    'spotify.lua',
     -- DB
+    -- SID
+    'sos.lua',
+    'send.lua'
 	}
 }
