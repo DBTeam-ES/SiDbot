@@ -3,7 +3,7 @@ HTTPS = require('ssl.https')
 URL = require('socket.url')
 JSON = require('dkjson')
 
-version = '3.0.1'
+version = '3.0'
 
 bot_init = function() -- The function run when the bot is started or reloaded.
 
@@ -16,12 +16,15 @@ bot_init = function() -- The function run when the bot is started or reloaded.
 		bot = getMe()
 	end
 	bot = bot.result
-
+	
+	print("init plugins")
 	plugins = {} -- Load plugins.
 	for i,v in ipairs(config.plugins) do
 		local p = dofile("plugins/"..v)
+		print("#" .. v)
 		table.insert(plugins, p)
 	end
+	print("SID" .. version)
 
 	print('@'..bot.username .. ', AKA ' .. bot.first_name ..' ('..bot.id..')')
 
