@@ -1,6 +1,6 @@
 local doc = [[
 	/reddit [r/subreddit | query]
-	Returns the four (if group) or eight (if private message) top posts for the given subreddit or query, or from the frontpage.
+	Reddit
 ]]
 
 local triggers = {

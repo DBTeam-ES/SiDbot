@@ -1,10 +1,10 @@
 local doc = [[
-	/calc <expression>
-	Returns solutions to mathematical expressions and conversions between common units. Results provided by mathjs.org.
+	🔨 /calc [calculo]
+	Não user na prova ;)
 ]]
 
 local triggers = {
-	'^/calc[@'..bot.username..']*'
+	'^/calc[uladora]*[@'..bot.username..']*'
 }
 
 local action = function(msg)

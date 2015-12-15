@@ -25,17 +25,8 @@ return {
 	greetings = {
 		['Hi, #NAME.'] = {
 			'hello',
-			'Ola!',
-            'oi'
-		},
-		['Adeus, #NAME.'] = {
-			'bye',
-            'Até mais',
-            'Adeus 0/'
-		},
-		['Bem-Vindo, #NAME.'] = {
-			'Bem-Vindo'
-		}
+			'Ola!'
+			}
 	},
   moderation = {
     admins = {
@@ -55,13 +46,16 @@ return {
 		'ping.lua', 
 		'whoami.lua', 
 		'nick.lua', 
-	  'echo.lua', 
-	  'help.lua',
+	  'echo.lua',
     -- Beta plugins
     -- New Plugin
     'spotify.lua',
+    'calc.lua',
     -- DB
+    'chatter.lua',
     -- SID
+    'help.lua',
+    'hackernews.lua',
     'sos.lua',
     'send.lua'
 	}

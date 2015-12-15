@@ -16,10 +16,11 @@ local action = function(msg)
     --🔨SiDv]] .. version .. [[.
     
     DEV:@TiagoDanin
-    Chanel:Telegram.me/BotSid
+    Channel:@BotSiD
+    Github:[/TiagoDanin/SiDBot](https://github.com/TiagoDanin/SiDbot)
     Sugestão e Suporte:/Sos [MSG]
 
-  Based on otouto v2.11 by @topkecleon.
+  Based on otouto v3.1 by @topkecleon.
   licensed GPLv2.
   ]] -- Please do not remove this message. ^.^
 
@@ -27,7 +28,7 @@ local action = function(msg)
 		sendMessage(msg.chat.id, message)
 		return
 	elseif string.match(msg.text_lower, '^/sobre[@'..bot.username..']*') or string.match(msg.text_lower, '^/info[@'..bot.username..']*') or string.match(msg.text_lower, '^/about[@'..bot.username..']*') then
-		sendMessage(msg.chat.id, message)
+		sendMessage(msg.chat.id, message, true, msg.message_id, true)
 		return
 	end
 
