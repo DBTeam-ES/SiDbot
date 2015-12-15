@@ -1,8 +1,8 @@
 return {
-	bot_api_key = '107890456:AAGj1OILK_w7gv0rRI26YFgLwazBrbHtRuQ',
+	bot_api_key = '',
 	google_api_key = '',
 	google_cse_key = '',
-	lastfm_api_key = '60ae7e5412fedef8c1c00dd8c745fd28',
+	lastfm_api_key = '',
 	owm_api_key = '',
 	biblia_api_key = '',
 	thecatapi_key = '',
@@ -39,14 +39,14 @@ return {
   },
 	plugins = {
     -- Base Plugin
-		'blacklist.lua',
-		'floodcontrol.lua',
-		'admin.lua', 
-		'about.lua', 
-		'ping.lua', 
-		'whoami.lua', 
-		'nick.lua', 
-	  'echo.lua',
+    'blacklist.lua',
+    'floodcontrol.lua',
+    'admin.lua', 
+    'about.lua', 
+    'ping.lua', 
+    'whoami.lua', 
+    'nick.lua',
+    'echo.lua',
     -- Beta plugins
     -- New Plugin
     'spotify.lua',
